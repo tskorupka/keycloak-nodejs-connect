@@ -128,6 +128,12 @@ Config.prototype.configure = function configure (config) {
    * Root realm URL.
    * @type {String}
    */
+  this.iss = resolveValue(config.iss || this.authServerUrl + '/realms/' + this.realm)
+
+  /**
+   * Root realm URL.
+   * @type {String}
+   */
   this.realmUrl = this.authServerUrl + '/realms/' + this.realm
 
   /**
